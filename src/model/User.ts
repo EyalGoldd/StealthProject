@@ -1,0 +1,13 @@
+import mongoose, { Document, Schema } from "mongoose";
+
+export interface IUser extends Document {
+    _id: Number,
+    questions: any
+}
+
+const UsersSchema: Schema = new Schema({
+    _id: Number,
+    questions: Map
+});
+
+export default mongoose.model<IUser>('user', UsersSchema); 
