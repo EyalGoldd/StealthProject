@@ -2,9 +2,8 @@ import { Request, Response, response } from "express";
 import Questions, { IQuestionsSet } from "../model/Question";
 import User from "../model/User";
 import { StartQuestionnaireContract } from "../contracts/QuestionsContracts";
-import { QUIZ_ID } from "../constants/temp";
-import { QuestionsMapper } from "../mapper/QuestionsMapper";
-import { UserMapper } from "../mapper/UserMapper";
+import { QUIZ_ID } from "../constants";
+import { QuestionsMapper, UserMapper } from "../mapper";
 
 export class QuestionService {
 

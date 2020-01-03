@@ -1,5 +1,5 @@
 import { Application } from 'express';
-import {QuestionService} from "../service/QuestionService";
+import {QuestionService} from "../service";
 
 export class QuestionController {
     private questionService: QuestionService;

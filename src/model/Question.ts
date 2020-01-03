@@ -20,7 +20,7 @@ const QuestionsSchema: Schema = new Schema({
     questions: [
         {
             question: { type: String, required: true },
-            answers: [{ answer: String, correct: Boolean, id: Number }]
+            answers: [{ answer: String, correct: Boolean, _id: Number }]
         }]
 });
 

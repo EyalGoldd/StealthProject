@@ -6,13 +6,9 @@ export class UserMapper {
         return UserMapper.findOne()
             .then(document => {
                 if (document !== null) {
-                    // const answers: {} = document.questions.get(quizId);
-                    const toReplace = `questions.${quizId}.${questionId}`;
-                    console.log(toReplace);
-                    // console.log(updateAnswers);
                     User.findByIdAndUpdate(USER_ID,
-                       {$set:{ toReplace: answer }}
-                    ).exec().then(console.log).catch(console.log);
+                        { $set: { toReplace: answer } }
+                    ).catch(console.log);
                 }
             }).catch(console.log)
     }
