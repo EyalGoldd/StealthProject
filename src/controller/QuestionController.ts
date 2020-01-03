@@ -10,6 +10,9 @@ export class QuestionController {
     }
 
     public routes() {
-        this.app.route('/').get();
+        this.app.route('/questions/startQuestionnaire').get(this.questionService.startQuestionnaire);
+        this.app.route('/questions/:quizId/:questionId').get(this.questionService.getById);
+        this.app.route('/questions/:quizId/:questionId').post(this.questionService.submitAnswer);
+        this.app.route('/questions/:quizId/result').get(this.questionService.getScore);
     }
 }

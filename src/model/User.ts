@@ -7,7 +7,7 @@ export interface IUser extends Document {
 
 const UsersSchema: Schema = new Schema({
     _id: Number,
-    questions: Map
+    questions: Object
 });
 
 export default mongoose.model<IUser>('user', UsersSchema); 
